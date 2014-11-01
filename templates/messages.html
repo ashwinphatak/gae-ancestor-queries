@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h2>{{ heading }}</h2>
+
+    {% include "_new_message_form.html" %}
+
+    <ul>
+    {% for m in messages %}
+        <li>
+            {{ m.text }}
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}
